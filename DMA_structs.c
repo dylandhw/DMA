@@ -42,10 +42,13 @@ int main() {
     return 0;
 }
 
-struct point createRandomPoints(int size, int maxVal) {
+struct point* createRandomPoints(int size, int maxVal) {
     struct point* temp;
     temp = (struct point*)malloc(size * sizeof(struct point));
 
     for(int i = 0; i < size; i++) {
-
+        temp[i].x = 1 + rand()%maxVal; // fills in each coordinate within desired range (1, maxVal | inclusive)
+        temp[i].y = 1 + rand()%maxVal;
+    }
+    return temp;
 }
