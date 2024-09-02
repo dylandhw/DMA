@@ -1,6 +1,21 @@
 // test code for dynamic memory allocation with structs
 // week 1 review for cs1 (data structs & alg.)
 
+/* NOTES
+------------------------------------------------------------------------------------------------------------------------
+
+Line 16: struct point* createRandomPoints(int size, int maxVal);
+'struct point*' of return type 'struct point,' since we are returning a pointer
+it is 'struct point*'
+
+Line 47: temp = (struct point*)malloc(size*sizeof(struct point));
+Things of note: dynamically allocates memory for an array of struct points
+casting to type 'struct point*' which is a pointer to 'struct point'
+temp is a pointer to this instance of struct point
+
+Other: remember to always free memory
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -56,5 +71,6 @@ struct point* createRandomPoints(int size, int maxVal) {
 void printPoints(struct point array[], int size) {
     for(int i = 0; i < size; i++)
         printf("%d, %d\n", array[i].x, array[i].y);
-    printf("(%d,%d).\n", array[size-1].x, array[size-1].y);
+    printf("(%d, %d)\n", array[size-1].x, array[size-1].y);
 }
+
