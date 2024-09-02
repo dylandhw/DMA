@@ -8,3 +8,10 @@
 #define MAX_INT 32767
 #define DEFAULT 10
 
+struct point {
+    int x;
+    int y;
+};
+
+struct point** createRandPoints(int size, int maxVal);
+void print(struct point* array[], int size);
