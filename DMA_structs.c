@@ -19,6 +19,7 @@ Other: remember to always free memory
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+
 #define ABSOLUTE_MAX 100000
 #define MAX_INT 32767
 #define DEFAULT 10
