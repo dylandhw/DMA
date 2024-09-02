@@ -17,5 +17,27 @@ struct point* createRandomPoints(int size, int maxVal);
 void printPoints(struct point array[], int size);
 
 int main() {
+    int max, arraySize;
+    srand(time(0));
+
+    // take in user input
+    printf("Size of array?\n");
+    scanf("%d", &arraySize);
+    printf("Max X & Y coordinate?\n");
+    scanf("%d", &max);
+
+    // changes if they are not in the designated range
+    if(arraySize > max) arraySize = max;
+    if(arraySize < 0) arraySize = 0;
+    if(max > MAX_INT) max = MAX_INT;
+    if(max < 0) max = DEFAULT;
+
+    // creates new array, prints it
+    struct point* values = createRandomPoints(arraySize, max);
+    printPoints(values, arraySize);
+
+    // frees memory
+    free(values);
+    system("pause");
     return 0;
 }
