@@ -52,3 +52,9 @@ struct point* createRandomPoints(int size, int maxVal) {
     }
     return temp;
 }
+
+void printPoints(struct point array[], int size) {
+    for(int i = 0; i < size; i++)
+        printf("%d, %d\n", array[i].x, array[i].y);
+    printf("(%d,%d).\n", array[size-1].x, array[size-1].y);
+}
