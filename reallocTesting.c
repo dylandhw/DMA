@@ -4,6 +4,14 @@
 
 #define EXTRA 10
 
+/* NOTES
+----------------------------
+Realloc with *just* 'EXTRA' will lead to garbage values, must include originally stored memory
+or else issues occur
+
+*/
+
+
 int main() {
     int numVals;
     srand(time(0));
