@@ -6,7 +6,7 @@
 
 /* NOTES
 ----------------------------
-Realloc with *just* 'EXTRA' will lead to garbage values, must include originally stored memory
+After testing, realloc with *just* 'EXTRA' will lead to garbage values, must include originally stored memory
 or else issues occur
 
 */
